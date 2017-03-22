@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/top_blue"
+        android:orientation="horizontal"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+
+        <EditText
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/search_edittext_shape"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:hint="请输入要搜索的网址"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="完成后点击搜索：www.example.com"
+            android:textSize="18sp"
+            android:textColor="#ff000000"
+            android:layout_alignParentRight="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#EEEEEE"></LinearLayout>
+        </RelativeLayout>
+
+
+
+
+
+     <ScrollView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:paddingLeft="20dp"
+
+                 >
+
+                 <TextView
+                     android:id="@+id/tv_tip"
+                     android:layout_width="match_parent"
+                     android:layout_height="50dp"
+                     android:gravity="left|center_vertical"
+                     android:text="搜索历史" />
+
+                 <!--分割线-->
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:background="#EEEEEE"></View>
+
+                 <com.lx.picturesearch.MyListView
+                     android:id="@+id/listView"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"/>
+
+
+             </LinearLayout>
+
+             <!--分割线-->
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="#EEEEEE"></View>
+
+             <TextView
+                 android:id="@+id/tv_clear"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:background="#F6F6F6"
+                 android:gravity="center"
+                 android:text="清除搜索历史" />
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_marginBottom="20dp"
+                 android:background="#EEEEEE"></View>
+         </LinearLayout>
+
+     </ScrollView>
+</LinearLayout>

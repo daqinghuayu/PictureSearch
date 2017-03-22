@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="top_blue">#00A0E9</color>
+    <color name="white">#ffffff</color>
+    <!-- 白色 -->
+    <color name="black">#000000</color>
+    <!-- 黑色 -->
+
+
+    <color name="grey0">#808080</color>
+    <color name="grey1">#D4D4D4</color>
+    <color name="grey2">#e4e4e4</color>
+    <color name="grey3">#f4f4f4</color>
+    <!-- 灰色 -->
+    <color name="darkgray_new">#a9a9a9</color>
+    <!-- 暗灰色 -->
+
+
+    <color name="transparent">#00000000</color>
+</resources>

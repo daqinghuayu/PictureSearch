@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--头部-->
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/top" />
+
+
+    <!--侧滑菜单-->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_top"
+        android:descendantFocusability="blocksDescendants"
+        >
+
+        <RelativeLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <!--信息文字-->
+            <TextView
+                android:id="@+id/tv_jieshao"
+                android:text="请点击下面网站,开始精彩之旅"
+                android:textColor="#103864"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:padding="10dp"/>
+            <!--首页推荐GridView-->
+            <GridView
+                android:id="@+id/gv_home"
+                android:layout_below="@id/tv_jieshao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:verticalSpacing="1dp"
+                android:horizontalSpacing="1dp"
+                />
+        </RelativeLayout>
+
+
+        <!--侧滑菜单-->
+        <include layout="@layout/drawer_home" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
